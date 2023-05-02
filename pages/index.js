@@ -16,7 +16,6 @@ export default function Home() {
 
   useEffect(() => {
     const randomQuestionIndex = Math.floor(Math.random() * questions.length);
-    console.log(randomQuestionIndex); 
     setQuestion(questions[randomQuestionIndex]);
   }, []);
 
@@ -78,6 +77,7 @@ export default function Home() {
           >
             <textarea
               className={styles.input}
+              autoComplete="off"
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyPress={(e) => {
